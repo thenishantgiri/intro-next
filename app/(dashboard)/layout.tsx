@@ -3,11 +3,13 @@ import NewTodoForm from '@/components/NewTodoForm';
 const DashboardLayout = ({ children }: any) => {
   return (
     <div>
-      <h1>Dashboard</h1>
+      <div>
+        <h1>Todos</h1>
+      </div>
       <div>
         <NewTodoForm />
       </div>
-      {children}
+      <div>{children}</div>
     </div>
   );
 };
