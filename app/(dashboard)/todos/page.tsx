@@ -2,7 +2,18 @@ import TodoList from '@/components/TodoList';
 import db from '@/utils/db';
 
 const fetchTodos = async () => {
-  const data = await db.todo.findMany({});
+  // Loading UI
+  await new Promise((resolve, reject) => setTimeout(() => resolve(1), 2000));
+
+  // Error UI
+  // await new Promise((resolve, reject) => setTimeout(() => reject(0), 2000));
+
+  const data = await db.todo.findMany({
+    where: {},
+    orderBy: {
+      createdAt: 'desc',
+    },
+  });
   return data;
 };
 
