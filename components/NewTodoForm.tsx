@@ -4,7 +4,11 @@ function NewTodoForm() {
   return (
     <div>
       <form action={newTodo}>
-        <input type="text" name="content" className="border border-black/25" />
+        <input
+          type="text"
+          name="content"
+          className="border border-black/25 mb-4"
+        />
         <button type="submit">create</button>
       </form>
     </div>
